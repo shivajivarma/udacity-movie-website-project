@@ -1,6 +1,7 @@
 import media
 import fresh_tomatoes
 
+#Initializing instances of Movie Class.
 frozen_movie = media.Movie('Frozen',
 	'the film tells the story of a fearless princess who sets off on' +
 	'an epic journey alongside a rugged iceman, his loyal pet reindeer,' +
@@ -28,7 +29,8 @@ lagaan_movie = media.Movie('Lagaan',
 	'https://www.youtube.com/watch?v=oSIGQ0YkFxs',
 	2.5, 3)
 	
-	
+# Creating a List which holds all the movie instances.	
 movies = [frozen_movie, gladiator_movie, avengers_movie, lagaan_movie]
 
+# Uses list of movie instances as input to generate an HTML file and open it in the browser.
 fresh_tomatoes.open_movies_page(movies)

@@ -9,6 +9,7 @@ class Video:
         duration (int): This is duration of the video in hours.
     """
 	def __init__(self, title, duration):
+		"""This is a constructor with initiates the Video Object by taking video information."""
 		self.title = title
 		self.duration = duration #Duration in hours
 		
@@ -28,6 +29,7 @@ class Movie(Video):
 	
 	VALID_RATINGS = ["BAD", "NICE", "VERY NICE", "AWESOME"]
 	def __init__(self, title, storyline, image, trailer, duration, rating):
+		"""This is a constructor with initiates the Movie Object by taking movie information as input (title, storyline, duration, rating, poster_image_url, trailer_youtube_url)"""
 		Video.__init__(self, title, duration)
 		self.storyline = storyline
 		self.poster_image_url = image
@@ -35,5 +37,6 @@ class Movie(Video):
 		self.rating = self.VALID_RATINGS[rating]
 	
 	def show_trailer(self):
+		"""This is a method, which on invocation open up browser window with youtube trailer of the movie"""
 		webbrowser.open(self.trailer)
 	
